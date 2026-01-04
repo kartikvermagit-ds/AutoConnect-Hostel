@@ -1,0 +1,16 @@
+{
+  "manifest_version": 3,
+  "name": "AutoConnect to hosted wifi portal",
+  "version": "1.0",
+  "description": "Auto login to hosted wifi portal",
+  "permissions": ["storage", "tabs", "scripting"],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://wifi.psit.ac.in/*"],
+      "js": ["content.js"]
+    }
+   ]
+}
